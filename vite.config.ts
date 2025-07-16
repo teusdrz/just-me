@@ -12,6 +12,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+   base: '/just-me/',
 
   // Configuração do Vitest (ambiente de teste)
   test: {
