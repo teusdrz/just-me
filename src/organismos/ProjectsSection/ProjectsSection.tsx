@@ -17,7 +17,7 @@ const PROJECTS_DATA = [
         <span className={cardStyles.highlight}>optimizing over 80% of the work and avoiding corrections for other sectors</span>.
       </>
     ),
-    imageUrl: '/images/image copy 2.png',
+    imageUrl: '/images/imagem-2.png',
     imageAlt: 'Imagem do projeto DoWhile 2021',
   },
   // ... outros projetos

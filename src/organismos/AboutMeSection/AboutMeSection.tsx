@@ -3,7 +3,7 @@ import { Typography } from '@/atomos/Typography';
 import styles from './AboutMeSection.module.css';
 
 // URL de uma imagem de placeholder. Substitua pela sua foto.
-const PROFILE_IMAGE_URL = '/images/image copy.png'; // Certifique-se de que esta URL está correta e a imagem existe!
+const PROFILE_IMAGE_URL = '/images/imagem-secundaria.png'; // Certifique-se de que esta URL está correta e a imagem existe!
 
 /**
  * AboutMeSection é um organismo que apresenta uma breve introdução

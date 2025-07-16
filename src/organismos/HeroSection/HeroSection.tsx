@@ -2,7 +2,7 @@ import { Typography } from '@/atomos/Typography';
 import styles from './HeroSection.module.css';
 
 // O caminho para a sua foto permanece o mesmo.
-const HERO_IMAGE_URL = '/images/image.png';
+const HERO_IMAGE_URL = '/images/foto-principal.png';
 
 const animatedWords = ['creativity', 'respect', 'purpose', 'care', 'love'];
 
