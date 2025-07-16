@@ -1,0 +1,52 @@
+/* Container principal da secção "About me" */
+.aboutContainer {
+  padding: 8rem 0; /* Adiciona um bom espaçamento vertical */
+  width: 100%;
+}
+
+/* Wrapper para o conteúdo (texto e imagem) */
+.contentWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem; /* Espaço entre o texto e a imagem */
+  margin-top: 4rem; /* Espaço abaixo do título da secção */
+}
+
+/* Container para o bloco de texto */
+.textContainer {
+  flex: 1; /* Permite que o texto ocupe o espaço disponível */
+  max-width: 600px;
+}
+
+/* Estilo para o texto em destaque (vermelho) */
+.highlightText {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* Container para a imagem */
+.imageContainer {
+  flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+/* Estilo da imagem de perfil */
+.profileImage {
+  width: 320px;
+  height: 400px;
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+  border-radius: 120px 24px 120px 24px; /* O truque para as bordas arredondadas assimétricas */
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Media Query para telas menores (layout de coluna única) */
+@media (max-width: 992px) {
+  .contentWrapper {
+    flex-direction: column; /* Empilha o texto e a imagem */
+    text-align: center;
+  }
+
+  .textContainer {
+    max-width: 100%;
+  }
+}

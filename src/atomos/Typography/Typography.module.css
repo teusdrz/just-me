@@ -1,0 +1,47 @@
+/* Estilo para a variante 'title' (h1, h2, etc.) */
+.title {
+  font-size: 5rem; /* 80px */
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em; /* Aproxima um pouco as letras */
+}
+
+/* Estilo para a variante 'subtitle' */
+.subtitle {
+  font-size: 1.25rem; /* 20px */
+  font-weight: 500;
+  color: #a7a7a7; /* Usa um cinza mais claro para subtítulos */
+}
+
+/* Estilo para a variante 'body' (parágrafos) */
+.body {
+  font-size: 1rem; /* 16px */
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/*
+  Classe para o efeito de gradiente.
+  Esta técnica usa um fundo de gradiente e o "corta" no formato do texto.
+*/
+.gradient {
+  background: linear-gradient(
+    90deg,
+    var(--color-gradient-start) 0%,
+    var(--color-gradient-end) 100%
+  );
+  -webkit-background-clip: text; /* Necessário para navegadores baseados em WebKit (Chrome, Safari) */
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Esconde a cor original do texto */
+}
+
+/* Media Query para telas menores (ex: mobile) */
+@media (max-width: 768px) {
+  .title {
+    font-size: 3rem; /* Reduz o tamanho do título em telas menores */
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+}

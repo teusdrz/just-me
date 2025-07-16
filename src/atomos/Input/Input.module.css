@@ -1,0 +1,29 @@
+/* Estilo base para todos os inputs e textareas */
+.inputBase {
+  width: 100%;
+  background-color: #1a1a1a; /* Fundo cinza escuro */
+  border: 1px solid #333; /* Borda sutil */
+  border-radius: 8px;
+  padding: 12px 16px;
+  color: var(--color-text); /* Cor do texto que definimos globalmente */
+  font-size: 1rem;
+  font-family: var(--font-primary);
+  outline: none; /* Remove a borda padrão do navegador ao focar */
+  transition: border-color 0.2s ease;
+}
+
+/* Estilo para quando o campo está em foco */
+.inputBase:focus {
+  border-color: var(--color-primary); /* Usa a cor de destaque ao focar */
+}
+
+/* Estilo para o placeholder do texto */
+.inputBase::placeholder {
+  color: #666;
+}
+
+/* Garante que a textarea não possa ser redimensionada horizontalmente */
+.inputBase[as='textarea'] {
+  resize: vertical;
+  min-height: 120px; /* Define uma altura mínima para a área de texto */
+}

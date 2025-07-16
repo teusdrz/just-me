@@ -1,0 +1,9 @@
+.labelBase {
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  color: #a7a7a7; /* Usa um cinza claro para o rótulo */
+  text-transform: uppercase; /* Coloca o texto em maiúsculas */
+  letter-spacing: 0.05em; /* Adiciona um leve espaçamento entre as letras */
+  display: block; /* Garante que o rótulo ocupe a sua própria linha */
+  margin-bottom: 8px; /* Adiciona um espaço abaixo do rótulo */
+}

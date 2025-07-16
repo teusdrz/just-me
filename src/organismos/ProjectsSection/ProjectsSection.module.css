@@ -1,0 +1,25 @@
+/* Container principal da secção de projetos */
+.projectsContainer {
+  padding: 8rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Estilo para o parágrafo de introdução */
+.introText {
+  margin-top: 1rem;
+  color: #a7a7a7;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* Container para a lista de cards de projeto */
+.projectsList {
+  margin-top: 5rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem; /* Adiciona um grande espaço vertical entre cada projeto */
+}

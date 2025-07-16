@@ -1,0 +1,14 @@
+/*
+  Define o layout principal da nossa página.
+  Usamos 'max-width' para limitar a largura do conteúdo em ecrãs grandes,
+  o que melhora a legibilidade. 'margin: 0 auto' centra o conteúdo.
+*/
+.layout {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem; /* Adiciona um espaçamento nas laterais */
+}
+body {
+  background-color: #000;
+  color: var(--color-text); /* Defina uma cor de texto padrão para o site */
+}

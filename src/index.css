@@ -1,0 +1,38 @@
+/* Importação da fonte 'Poppins' do Google Fonts, usada no design de referência */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/*
+  Definição de variáveis de cor (CSS Custom Properties) para fácil manutenção.
+*/
+:root {
+  --color-background: #0A0A0A; 
+  --color-text: #E1E1E6;
+  --color-primary: #FF005C;
+  --color-primary-dark: #b30041; 
+  --color-gradient-start: #FFFFFF;
+  --color-gradient-end: #A7A7A7;
+  --font-primary: 'Poppins', sans-serif;
+}
+
+/* Reset de CSS e configuração do Box Model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos aplicados ao corpo da página */
+body {
+  font-family: var(--font-primary);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a, button {
+  color: inherit;
+  text-decoration: none;
+  font-family: var(--font-primary);
+}

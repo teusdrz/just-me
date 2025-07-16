@@ -1,0 +1,35 @@
+/* Estilo base para o botão */
+.button {
+  padding: 14px 32px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: 100%; /* Faz o botão ocupar a largura máxima do formulário */
+  max-width: 600px;
+}
+
+/* Efeito ao passar o mouse */
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+}
+
+/* Estilo para o botão desativado */
+.button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Variante primária: para o botão "Submit" */
+.primary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.primary:hover:not(:disabled) {
+  background-color: #e60053; /* Um tom um pouco mais escuro da cor primária */
+}

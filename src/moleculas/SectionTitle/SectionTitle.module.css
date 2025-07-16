@@ -1,0 +1,16 @@
+/* Estilo para o container principal da molécula */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centraliza o título e a linha */
+  gap: 8px; /* Espaçamento entre o título e a linha */
+  width: 100%;
+}
+
+/* Estilo para a linha decorativa vermelha */
+.divider {
+  width: 60px;
+  height: 4px;
+  background-color: var(--color-primary); /* Usa a variável de cor que definimos */
+  border-radius: 2px;
+}

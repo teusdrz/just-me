@@ -1,0 +1,51 @@
+.socialContainer {
+  position: fixed; /* Fixa a barra na tela */
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Linha vertical que acompanha os ícones */
+.line {
+  width: 1px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Texto "Follow me" escrito na vertical */
+.followText {
+  writing-mode: vertical-rl; /* Faz o texto ser escrito de cima para baixo */
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: #a7a7a7;
+}
+
+.iconList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.iconList a {
+  color: #a7a7a7;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.iconList a:hover {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+/* Esconde a barra em telas muito pequenas para não poluir a interface */
+@media (max-width: 1200px) {
+  .socialContainer {
+    display: none;
+  }
+}

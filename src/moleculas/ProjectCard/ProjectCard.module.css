@@ -1,0 +1,74 @@
+.cardContainer {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* Alterna a direção do layout para cada card filho ímpar de um container pai */
+/* Isso cria o efeito de zigue-zague visto na referência */
+:global(.projectsList > :nth-child(odd)) .cardContainer {
+  flex-direction: row-reverse;
+}
+
+.textWrapper {
+  flex: 1;
+}
+
+.projectTitle {
+  color: var(--color-text); /* Sobrescreve a cor padrão do subtítulo */
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.projectDescription {
+  margin-top: 1rem;
+}
+
+.divider {
+  width: 40px;
+  height: 2px;
+  background-color: var(--color-primary);
+  margin-top: 1.5rem;
+}
+
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projectImage {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #1a1a1a;
+  padding: 1rem;
+  transform: perspective(1000px) rotateY(-10deg) rotateX(5deg);
+  transition: transform 0.3s ease;
+}
+
+.cardContainer:hover .projectImage {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+/* Media Query para layout de coluna única em telas menores */
+@media (max-width: 992px) {
+  .cardContainer,
+  :global(.projectsList > :nth-child(odd)) .cardContainer {
+    flex-direction: column;
+  }
+
+  .projectImage {
+    transform: none;
+  }
+}
+
+/* ... Adicione esta classe ao final do seu ficheiro CSS existente ... */
+
+.highlight {
+  color: var(--color-primary);
+  font-weight: 600;
+}
