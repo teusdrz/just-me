@@ -11,11 +11,10 @@
 
   padding: 0.8rem 4rem; /* Reduzido o padding vertical para torná-lo mais fino */
   
-  /* ADICIONADO: Cor de fundo para o preto mais escuro, quase opaco. */
-  background-color: rgba(0, 0, 0, 0.95); 
-  
-  backdrop-filter: blur(10px); /* Mantido o efeito de vidro fosco */
-  -webkit-backdrop-filter: blur(10px);
+  /* REMOVIDO: Cor de fundo e efeito de desfoque para transparência total */
+  /* background-color: rgba(0, 0, 0, 0.95); */
+  /* backdrop-filter: blur(10px); */
+  /* -webkit-backdrop-filter: blur(10px); */
 
   border-radius: 0; /* Garante que não haja cantos arredondados */
   box-shadow: none; /* Garante que não haja sombra */
