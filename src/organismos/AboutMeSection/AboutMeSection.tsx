@@ -1,6 +1,7 @@
 import { SectionTitle } from '@/moleculas/SectionTitle';
 import { Typography } from '@/atomos/Typography';
 import styles from './AboutMeSection.module.css';
+import img from '../../../public/images/imagem-secundaria.png'
 
 // URL de uma imagem de placeholder. Substitua pela sua foto.
 const PROFILE_IMAGE_URL = '/images/imagem-secundaria.png'; // Certifique-se de que esta URL está correta e a imagem existe!

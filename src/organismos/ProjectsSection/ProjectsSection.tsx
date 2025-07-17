@@ -3,6 +3,7 @@ import { ProjectCard } from '@/moleculas/ProjectCard';
 import { Typography } from '@/atomos/Typography';
 import styles from './ProjectsSection.module.css';
 import cardStyles from '@/moleculas/ProjectCard/ProjectCard.module.css';
+import img from '../../../public/images/imagem-2.png'
 
 const PROJECTS_DATA = [
   {
@@ -17,7 +18,7 @@ const PROJECTS_DATA = [
         <span className={cardStyles.highlight}>optimizing over 80% of the work and avoiding corrections for other sectors</span>.
       </>
     ),
-    imageUrl: '/images/imagem-2.png',
+    imageUrl: img,
     imageAlt: 'Imagem do projeto DoWhile 2021',
   },
   // ... outros projetos

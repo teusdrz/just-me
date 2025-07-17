@@ -1,12 +1,13 @@
 import { Typography } from '@/atomos/Typography';
 import styles from './HeroSection.module.css';
+import Img from "../../../public/images/foto-principal.png";
 
 
 // O caminho para a sua foto permanece o mesmo.
-const HERO_IMAGE_URL = '~/portfolio/public/images/foto-principal.png';
+const HERO_IMAGE_URL = "/images/foto-principal.png";
 
 const animatedWords = ['creativity', 'respect', 'purpose', 'care', 'love'];
-
+console.log("images", HERO_IMAGE_URL)
 export const HeroSection = () => {
   // A função handleScrollToAbout não é mais necessária, pois usaremos apenas HTML/CSS
   // const handleScrollToAbout = () => {
@@ -21,7 +22,7 @@ export const HeroSection = () => {
       {/* O wrapper ainda é útil para centralizar o grupo de elementos na tela. */}
       <div className={styles.contentWrapper}>
         <img
-          src={HERO_IMAGE_URL}
+          src={Img}
           alt="Sua foto de perfil"
           className={styles.heroImage}
         />
