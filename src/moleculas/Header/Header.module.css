@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 1.5rem 4rem; /* Mantido o padding lateral para corresponder ao HeroSection */
+  padding: 0.8rem 4rem; /* Reduzido o padding vertical para torná-lo mais fino */
   
   /* ADICIONADO: Cor de fundo para o preto mais escuro, quase opaco. */
   background-color: rgba(0, 0, 0, 0.95); 
@@ -66,4 +66,11 @@
 .contactLink:hover::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+/* Media Query para Header em Mobile */
+@media (max-width: 768px) {
+  .headerContainer {
+    padding: 0.6rem 1rem; /* Reduz ainda mais o padding em mobile para ser mais fino */
+  }
 }

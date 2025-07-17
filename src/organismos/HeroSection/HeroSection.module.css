@@ -191,7 +191,7 @@ html {
 }
 
 
-/* Media queries para telas menores: Ajustes de posicionamento */
+/* --- Media Queries para Responsividade --- */
 @media (max-width: 1200px) {
   .helloText {
     right: calc(50% + 15vw); /* Ajustado novamente para dar mais espaço */
@@ -205,50 +205,84 @@ html {
 }
 
 @media (max-width: 768px) {
+  .heroContainer {
+    padding: 0 1rem; /* Reduz padding lateral para mobile */
+  }
+
   .contentWrapper {
     flex-direction: column;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 20px; /* Reduzido para trazer conteúdo mais para cima, afastando do header */
+    padding-bottom: 0.5rem; /* Reduzido para trazer conteúdo mais para cima */
   }
+
   .heroImage {
-    max-height: 50vh;
-    max-width: 450px; /* Mantido */
-    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    max-height: 60vh; /* Aumenta a altura máxima da imagem em mobile */
+    max-width: 90%; /* Permite que a imagem ocupe mais largura da tela */
+    width: auto; /* Permite que a largura se ajuste à altura */
+    margin-top: 0; /* Remove margem superior extra se o padding do wrapper já resolver */
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%); /* Mantido o fade out */
     -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
   }
+
   .helloText, .worldWrapper {
-    position: relative;
-    transform: none;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: center;
-    margin-bottom: 1rem; 
+    position: relative; /* Mantido como relativo para fluxo normal em mobile */
+    transform: none; /* Reset do transform desktop */
+    top: auto;
+    left: auto;
+    right: auto;
+    text-align: center; /* Centraliza o texto */
+    margin-bottom: 0.5rem; /* Espaçamento entre hello e world */
   }
-  /* Reaplicar transform para animação em mobile se necessário, ou remover */
+  
   .helloText {
-    margin-bottom: 1rem; 
-    transform: none; /* Reset para mobile se a animação for global */
+    font-size: clamp(2.5rem, 10vw, 4.5rem); /* Ajusta o tamanho da fonte para mobile */
+    margin-bottom: -0.5rem; /* Ajusta a proximidade entre "Hello" e "World" */
     animation: fadeInSlideUp 1s ease forwards; /* reaplicar animação */
     animation-delay: 0.2s;
   }
   .worldWrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centraliza "World" e o container de texto animado */
   }
-  .worldText { /* Adicionado para garantir que a animação funcione em mobile */
-      transform: none; /* Reset para mobile se a animação for global */
+  .worldText {
+      font-size: clamp(3rem, 12vw, 5.5rem); /* Ajusta o tamanho da fonte para mobile */
       animation: fadeInSlideUp 1s ease forwards; /* reaplicar animação */
       animation-delay: 0.4s;
   }
   .animatedTextContainer {
-    align-items: center; 
+    align-items: center; /* Centraliza os textos animados */
+    margin-left: 0; /* Remove margem lateral em mobile */
+    padding-bottom: 0.1rem; /* Reduzido para trazer conteúdo mais para cima */
   }
   .redArrow {
-    justify-content: center; 
+    /* Ajustes para a seta vermelha em mobile */
+    width: 50px; /* Mantém a largura da seta como no desktop */
+    margin-top: 0.1rem; /* Reduzido para aproximar mais do texto "in every pixel." */
+    margin-bottom: 0.1rem; /* Espaçamento inferior */
+    justify-content: center; /* Centraliza a seta vermelha */
+    position: relative; /* Permite posicionamento relativo ao animatedTextContainer */
   }
   .scrollDownArrow {
-      bottom: 1.5rem; /* Ajuste para mobile */
+      bottom: 0.1rem; /* Movido mais para cima para ficar visível */
+  }
+}
+
+@media (max-width: 480px) {
+  .heroImage {
+    max-height: 50vh; /* Ajuste para telas muito pequenas */
+    max-width: 95%; /* Ocupa mais largura */
+  }
+  .helloText {
+    font-size: clamp(2rem, 9vw, 4rem);
+  }
+  .worldText {
+    font-size: clamp(2.5rem, 11vw, 5rem);
+  }
+  .animatedWord {
+    font-size: clamp(1rem, 4.5vw, 1.8rem);
+  }
+  .animatedTextSlogan {
+    font-size: clamp(0.8rem, 2.8vw, 1.1rem);
   }
 }
