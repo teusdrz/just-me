@@ -6,10 +6,14 @@ import styles from './ContactSection.module.css';
 import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser'; // Importa a biblioteca EmailJS
 
-// Importe ícones de sua preferência. Exemplo com Font Awesome.
+// Importe ícones de Font Awesome.
 // Certifique-se de ter essas bibliotecas instaladas e configuradas.
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { 
+  faLinkedin, 
+  faGithub
+} from '@fortawesome/free-brands-svg-icons';
+import { faCheck } from '@fortawesome/free-solid-svg-icons'; // Importa o ícone de checkmark
 
 
 /**
@@ -110,22 +114,23 @@ export const ContactSection = () => {
         )}
       </form>
 
-      {/* Seção de Redes Sociais - Mantida para referência, mas não estava no CSS básico que você forneceu */}
-      {/* Se você quiser que ela apareça, precisará adicionar os estilos .socialLinks, .socialLink no CSS */}
-      <div className={styles.socialLinks}>
-        <a href="https://www.linkedin.com/in/matheus-vinicius-82b50a26b/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-          <FontAwesomeIcon icon={faLinkedin} />
-        </a>
-        <a href="https://github.com/teusdrz" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-          <FontAwesomeIcon icon={faGithub} />
-        </a>
-        <a href="https://instagram.com/seu-usuario-instagram" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
-          <FontAwesomeIcon icon={faInstagram} />
-        </a>
+      {/* Seção de Redes Sociais */}
+      <div className={styles.socialLinksContainer}> {/* Novo container para "Follow Me" e ícones */}
+        <Typography as="span" variant="body" className={styles.followMeText}>
+          Follow Me
+        </Typography>
+        <div className={styles.socialLinks}>
+          <a href="https://www.linkedin.com/in/matheus-vinicius-82b50a26b/" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a href="https://github.com/teusdrz" target="_blank" rel="noopener noreferrer" className={styles.socialLink}>
+            <FontAwesomeIcon icon={faGithub} />
+          </a>
+      
+        </div>
       </div>
 
-      {/* Rodapé - Mantido para referência, mas não estava no CSS básico que você forneceu */}
-      {/* Se você quiser que ele apareça, precisará adicionar os estilos .footer, .footerText no CSS */}
+      {/* Rodapé */}
       <footer className={styles.footer}>
         <Typography as="span" variant="body" className={styles.footerText}>
           &copy; {new Date().getFullYear()} Matheus Vinicius. All rights reserved.
@@ -135,9 +140,10 @@ export const ContactSection = () => {
       {/* Tela de Sucesso (Overlay) - Renderizada condicionalmente */}
       <div className={`${styles.successOverlay} ${showSuccessScreen ? styles.show : ''}`}>
         <div className={styles.checkmarkContainer}>
-          <div className={styles.checkmark}></div>
+          {/* Ícone de checkmark do Font Awesome */}
+          <FontAwesomeIcon icon={faCheck} className={styles.checkmarkIcon} />
         </div>
-        <Typography as="h3" variant="body" className={styles.successMessageText}> {/* ALTERADO: variant="heading" para variant="body" */}
+        <Typography as="h3" variant="body" className={styles.successMessageText}>
           Mensagem Enviada!
         </Typography>
       </div>

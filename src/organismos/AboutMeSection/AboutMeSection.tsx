@@ -4,7 +4,7 @@ import styles from './AboutMeSection.module.css';
 import img from '../../../public/images/imagem-secundaria.png'
 
 // URL de uma imagem de placeholder. Substitua pela sua foto.
-const PROFILE_IMAGE_URL = '/images/imagem-secundaria.png'; // Certifique-se de que esta URL está correta e a imagem existe!
+const PROFILE_IMAGE_URL = img; // Certifique-se de que esta URL está correta e a imagem existe!
 
 /**
  * AboutMeSection é um organismo que apresenta uma breve introdução
@@ -31,7 +31,7 @@ export const AboutMeSection = () => {
 
         <div className={styles.imageContainer}>
           <img
-            src={PROFILE_IMAGE_URL}
+            src={img}
             alt="Foto de perfil de [Seu Nome]"
             className={styles.profileImage}
           />

@@ -28,6 +28,57 @@
   position: relative; /* Para o feedback de mensagem */
 }
 
+/* --- Estilos para a Seção de Redes Sociais --- */
+.socialLinksContainer {
+  margin-top: 3rem; /* Espaçamento do formulário */
+  display: flex;
+  flex-direction: column; /* "Follow Me" acima dos ícones */
+  align-items: center;
+  gap: 1.5rem; /* Espaçamento entre o texto e os ícones */
+}
+
+.followMeText {
+  font-size: 1.1rem; /* Tamanho do texto "Follow Me" */
+  color: #fff; /* Cor do texto "Follow Me" */
+  font-weight: 500;
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Espaçamento entre os ícones */
+}
+
+.socialLink {
+  color: #fff; /* Cor dos ícones */
+  font-size: 1.5rem; /* Tamanho dos ícones */
+  transition: color 0.3s ease;
+  text-decoration: none; /* Remove sublinhado padrão do link */
+}
+
+.socialLink:hover {
+  color: var(--color-primary); /* Cor ao passar o mouse */
+}
+
+/* --- Estilos para o Rodapé --- */
+.footer {
+  width: 100%;
+  margin-top: 5rem; /* Espaçamento da seção de redes sociais */
+  padding-top: 2rem;
+  border-top: 1px solid #333; /* Linha divisória sutil */
+  display: flex;
+  justify-content: center; /* Centraliza o texto de copyright */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footerText {
+  font-size: 0.9rem;
+  color: #a7a7a7;
+}
+
+
 /* --- Estilos para a Tela de Sucesso (Overlay com o 'V') --- */
 .successOverlay {
   position: absolute; /* Posição absoluta em relação ao .contactContainer */
@@ -63,13 +114,11 @@
   animation: pulse 1.5s infinite alternate; /* Animação de pulso */
 }
 
-.checkmark {
-  width: 40px; /* Largura da perna horizontal do V */
-  height: 80px; /* Altura da perna vertical do V */
-  border: solid #fff; /* Cor do V */
-  border-width: 0 10px 10px 0; /* Apenas bordas direita e inferior */
-  transform: rotate(45deg); /* Rotaciona para formar o V */
-  animation: scaleIn 0.5s ease-out forwards; /* Animação de entrada do V */
+/* Estilo para o ícone de checkmark (Font Awesome) */
+.checkmarkIcon {
+  color: #fff; /* Cor do ícone */
+  font-size: 60px; /* Tamanho do ícone */
+  animation: scaleIn 0.5s ease-out forwards; /* Animação de entrada do ícone */
 }
 
 .successMessageText {
@@ -90,8 +139,8 @@
 }
 
 @keyframes scaleIn {
-  from { transform: rotate(45deg) scale(0); opacity: 0; }
-  to { transform: rotate(45deg) scale(1); opacity: 1; }
+  from { transform: scale(0); opacity: 0; } /* Ajustado para o ícone */
+  to { transform: scale(1); opacity: 1; }
 }
 
 @keyframes fadeIn {
@@ -109,18 +158,74 @@
     padding: 1.5rem;
   }
 
+  .socialLinksContainer {
+    margin-top: 2rem; /* Ajusta espaçamento em telas menores */
+    gap: 1rem;
+  }
+
+  .socialLink {
+    font-size: 1.3rem; /* Ajusta tamanho dos ícones em mobile */
+  }
+
+  .footer {
+    margin-top: 3rem;
+  }
+
   .checkmarkContainer {
     width: 80px;
     height: 80px;
   }
 
-  .checkmark {
-    width: 30px;
-    height: 60px;
-    border-width: 0 8px 8px 0;
+  .checkmarkIcon { /* Ajuste para o ícone em mobile */
+    font-size: 48px;
   }
 
   .successMessageText {
     font-size: 1.4rem;
+  }
+}
+
+/* --- Novos Estilos para o Título "Contact me" e Linha --- */
+/* Estes estilos devem ser aplicados ao componente SectionTitle ou ao seu container */
+/* Como SectionTitle é um componente separado, vamos criar uma classe para ele */
+/* ou você pode modificar o SectionTitle.module.css diretamente se preferir */
+
+/* Exemplo de como você pode aplicar um estilo ao SectionTitle se ele aceitar className */
+/* No ContactSection.tsx, você adicionaria className={styles.contactTitle} ao SectionTitle */
+.contactTitle {
+  color: #fff; /* Cor base para o texto, que será sobreposta pelo gradiente/sombra */
+  font-size: clamp(3rem, 7vw, 5rem); /* Ajuste o tamanho da fonte se necessário */
+  font-weight: 700; /* Pode ser ajustado para a espessura da fonte */
+  text-align: center;
+  position: relative;
+  /* Efeito de brilho/sombra sutil para o texto "Contact me" */
+  text-shadow: 
+    0 0 8px rgba(255, 255, 255, 0.4),   /* Sombra branca suave, mais espalhada */
+    0 0 15px rgba(255, 255, 255, 0.15), /* Sombra branca mais difusa */
+    0 0 25px rgba(255, 0, 127, 0.05);  /* Brilho rosa/vermelho muito sutil e espalhado */
+  
+  /* Gradiente sutil para a cor do texto, se SectionTitle não tiver gradient */
+  /* Se SectionTitle já tem um gradiente, este pode ser redundante ou conflitar */
+  /* background: linear-gradient(to right, #fff, #ccc); */
+  /* -webkit-background-clip: text; */
+  /* -webkit-text-fill-color: transparent; */
+}
+
+.contactTitleLine {
+  width: 80px; /* Largura da linha */
+  height: 3px; /* Espessura da linha */
+  background-color: var(--color-primary); /* Cor da linha (vermelho/rosa) */
+  margin-top: 0.5rem; /* Espaçamento abaixo do título */
+  margin-bottom: 2rem; /* Espaçamento antes do subtítulo */
+  border-radius: 2px; /* Cantos levemente arredondados */
+}
+
+/* Media query para o título em telas menores */
+@media (max-width: 768px) {
+  .contactTitle {
+    font-size: clamp(2.5rem, 8vw, 4rem);
+  }
+  .contactTitleLine {
+    width: 60px;
   }
 }
