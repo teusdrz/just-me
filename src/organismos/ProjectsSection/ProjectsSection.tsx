@@ -3,8 +3,10 @@ import { ProjectCard } from '@/moleculas/ProjectCard';
 import { Typography } from '@/atomos/Typography';
 import styles from './ProjectsSection.module.css';
 import cardStyles from '@/moleculas/ProjectCard/ProjectCard.module.css';
-import img from '../../../public/images/imagem-2.png'
+import img from '../../../public/images/imagem-2.png';
+import immg from '../../../public/images/nowlex.png';
 
+// --- DADOS DOS PROJETOS ATUALIZADOS ---
 const PROJECTS_DATA = [
   {
     id: 'proj1',
@@ -21,7 +23,29 @@ const PROJECTS_DATA = [
     imageUrl: img,
     imageAlt: 'Imagem do projeto DoWhile 2021',
   },
-  // ... outros projetos
+  // --- NOVO PROJETO ADICIONADO ABAIXO ---
+  {
+    id: 'proj2',
+    title: 'Full Stack ERP System',
+    description: (
+      <>
+        This is my full stack project at the moment, where I'm working with the following languages:{' '}
+        <span className={cardStyles.highlight}>
+          Python, Django, Flask, FastAPI, Tailwind, Javascript, e PostgresSQL
+        </span>
+        , where the user registers debtors, contracts and lawsuits, with an API integration with the database, 
+        using JSON to simulate real users. I've also added a{' '}
+        <span className={cardStyles.highlight}>
+          dashboard to monitor data in real time
+        </span>
+        .
+      </>
+    ),
+    // ATENÇÃO: Usando a mesma imagem como placeholder. Importe a imagem correta para este projeto.
+    imageUrl: immg, 
+    imageAlt: 'Nowlex',
+  },
+  // ... outros projetos podem ser adicionados aqui
 ];
 
 export const ProjectsSection = () => {

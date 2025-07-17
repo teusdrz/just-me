@@ -21,5 +21,48 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 6rem; /* Adiciona um grande espaço vertical entre cada projeto */
+  
+  /* * ALTERAÇÃO SIGNIFICATIVA PARA SEPARAR BEM OS PROJETOS 
+   * Aumentei o valor de 6rem para 12rem para criar um grande espaço vertical.
+   * Você pode ajustar este valor se desejar mais ou menos espaço.
+  */
+  gap: 12rem; 
+}
+
+
+/* * ===================================================================
+ * ANIMAÇÃO ELEGANTE PARA A LINHA NA DESCRIÇÃO
+ * ===================================================================
+ * Estes estilos criam a animação de sublinhado ao passar o mouse.
+*/
+
+/* Estilo para a classe .highlight (o texto destacado na descrição) */
+.highlight {
+  position: relative; /* Base para o posicionamento da linha */
+  padding-bottom: 3px; /* Pequeno espaço entre o texto e a linha */
+  cursor: pointer; /* Muda o cursor para indicar interatividade */
+}
+
+/* Cria o elemento da linha que será animado. */
+.highlight::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  /* A linha começa invisível (largura 0) */
+  width: 0; 
+  
+  /* Linha fina e minimalista com a cor padrão do site */
+  height: 1px; 
+  background-color: #a7a7a7; 
+  
+  /* Animação suave para o crescimento da linha (duração de 0.4 segundos) */
+  transition: width 0.4s ease-in-out;
+}
+
+/* Efeito que acontece ao passar o mouse por cima do texto */
+.highlight:hover::after {
+  /* A linha cresce até ocupar 100% da largura do texto */
+  width: 100%; 
 }
